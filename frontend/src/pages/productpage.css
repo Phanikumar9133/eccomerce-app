@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.product-detail {
+  padding: 60px 40px;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+}
+
+.product-detail-card {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.product-image-section {
+  flex: 1;
+  padding: 30px;
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-section img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-image-section img:hover {
+  transform: scale(1.05);
+}
+
+.product-info-section {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+.product-info-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.product-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  color: #e53935;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.buy-button, .cart-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buy-button {
+  background: #0d47a1;
+  color: #fff;
+}
+
+.buy-button:hover {
+  background: #1565c0;
+}
+
+.cart-button {
+  background: #f5f5f5;
+  color: #0d47a1;
+  border: 1px solid #0d47a1;
+}
+
+.cart-button:hover {
+  background: #e3f2fd;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+  background: white;
+  margin: 40px auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.product-detail img {
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.product-detail p {
+  color: #333;
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 800px;
+}

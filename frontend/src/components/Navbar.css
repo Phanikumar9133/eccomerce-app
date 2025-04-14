@@ -1,0 +1,125 @@
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c2c54;
+  color: white;
+  position: relative;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #f39c12;
+}
+
+/* Shopping Cart Icon */
+.nav-links li a svg {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover svg {
+  color: #f39c12;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2c2c54;
+    flex-direction: column;
+    align-items: center;
+    display: none;  /* Hidden by default */
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;  /* Show menu when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on small screens */
+  }
+
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+}
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+}

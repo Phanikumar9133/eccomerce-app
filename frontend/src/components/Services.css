@@ -1,0 +1,27 @@
+.services {
+    padding: 3rem;
+    background: #f9f9f9;
+    text-align: center;
+    color: black;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .services p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .services ul {
+    list-style-type: none;
+    font-size: 1.1rem;
+  }
+  
+  .services li {
+    margin: 1rem 0;
+  }
+  

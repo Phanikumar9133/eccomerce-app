@@ -1,0 +1,38 @@
+.admin-dashboard {
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-summary {
+  margin-bottom: 20px;
+  background: #d6eaff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #0099ff;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
