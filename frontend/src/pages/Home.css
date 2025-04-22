@@ -58,3 +58,33 @@ body{
     transform: translateY(0);
   }
 }
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.add-to-cart-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e55347;
+}

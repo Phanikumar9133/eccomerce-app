@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './components/About';
+import Home from './components/Help';
+import About
 import Services from './components/Services';
 import ProductType from './components/ProductType';
 import Help from './components/Help';
-import Login from './components/login';
-import Register from './components/regesterpage';
+import Login from './components/Login';
+import Register from './components/RegisterPage'; // Corrected
 import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Filter from './pages/Filter';
@@ -22,16 +22,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/producttype" element={<ProductType />} />
-          <Route path="/help" element={<Help />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/ProductType" element={<ProductType />} />
+          <Route path="/Help" element={<Help />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/regester" element={<Register />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/registerpage" element={<Register />} /> {/* Corrected path */}
+          <Route path="/ProductDetails/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/filter" element={<Filter />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Filter" element={<Filter />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/AdminDashboard" element={<AdminDashboard />} />
         </Routes>
         <Footer />
