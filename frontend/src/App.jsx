@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Help';
-import About
+import Home from './pages/Home';
+import About from './components/About';
 import Services from './components/Services';
 import ProductType from './components/ProductType';
 import Help from './components/Help';
-import Login from './components/Login';
-import Register from './components/RegisterPage'; // Corrected
+import Login from './components/login';
+import Register from './components/regesterpage';
 import ProductDetails from './pages/ProductDetails';
-import Cart from './pages/Cart';
+import CartPage from './components/cartpage';
 import Filter from './pages/Filter';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
@@ -27,9 +27,9 @@ function App() {
           <Route path="/ProductType" element={<ProductType />} />
           <Route path="/Help" element={<Help />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/registerpage" element={<Register />} /> {/* Corrected path */}
+          <Route path="/regesterpage" element={<Register />} />
           <Route path="/ProductDetails/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cartpage" element={<CartPage />} />
           <Route path="/Filter" element={<Filter />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AdminDashboard" element={<AdminDashboard />} />

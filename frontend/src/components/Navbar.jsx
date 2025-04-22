@@ -8,18 +8,15 @@ const Navbar = () => {
   const [cartCount, setCartCount] = useState(0);
   const location = useLocation();
 
-  // Toggle hamburger menu
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
 
-  // Fetch cart count on mount and whenever route changes
   useEffect(() => {
     const count = localStorage.getItem("cartCount");
     setCartCount(count ? parseInt(count) : 0);
-  }, [location]);  // 👈 Triggered when route changes
+  }, [location]);
 
-  // Listen to cart updates across tabs/windows
   useEffect(() => {
     const handleStorageChange = () => {
       const updatedCount = localStorage.getItem("cartCount");
@@ -41,18 +38,14 @@ const Navbar = () => {
         <li><Link to="/Help">Help</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li>
-          <Link to="/cart">
-            <FaShoppingCart />
+          <Link to="/cartpage" className="cart-icon-link">
+            <FaShoppingCart size={20} />
             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
         </li>
       </ul>
-
-      {/* Hamburger icon */}
       <button className={`hamburger ${menuActive ? 'active' : ''}`} onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div>
       </button>
     </nav>
   );

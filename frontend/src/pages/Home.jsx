@@ -1,3 +1,4 @@
+// Home.jsx
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
@@ -34,9 +35,6 @@ function Home() {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    const totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-    localStorage.setItem("cartCount", totalCount);
-
     try {
       await axios.post("http://localhost:5000/api/cart/add", {
         userEmail: loggedInUser.email,
@@ -62,7 +60,7 @@ function Home() {
               onClick={() => handleAddToCart(product)}
               className="add-to-cart-btn"
             >
-              Add to Cartz
+              Add to Cart
             </button>
           </ProductCard>
         ))}
